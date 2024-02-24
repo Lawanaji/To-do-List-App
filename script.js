@@ -1,10 +1,11 @@
 let addBtn = document.getElementById('addBtn')
 let toast = document.querySelector('toast')
+let inputTodo = document.querySelector('#input-todo');
 
 addTodo = ()=>{
-let inputTodo = document.querySelector('#input-todo').value;
+    let todo = inputTodo.value;
 
-if(!inputTodo.trim()){
+if(!todo.trim()){
     toast.innerHTML = "input field is required";
     toast.classList.add("show")
     return setTimeout(()=>{
@@ -13,7 +14,7 @@ if(!inputTodo.trim()){
 }
 
 let todosList = document.getElementById('todos-list')
-const textNode = document.createTextNode(inputTodo)
+const textNode = document.createTextNode(todo)
 const devEl = document.createElement('div')
 const spanEl = document.createElement('span')
 spanEl.setAttribute("class", "delete")
@@ -23,11 +24,9 @@ devEl.appendChild(textNode)
 devEl.appendChild(spanEl)
 todosList.appendChild(devEl)
 inputTodo.value = "";
+
 spanEl.addEventListener("click", ()=>{
     todosList.removeChild(spanEl.parentElement)
-    if(spanEl.backgroundColor = '#EB4764'){
-        spanEl.backgroundColor = 'white'
-    }
 } )
 }
 
