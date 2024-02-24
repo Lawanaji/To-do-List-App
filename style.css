@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+:root{
+    --darker-gray: #212529;
+    --dark-gray: #495057;
+    --light-gray: #CED4DA;
+    --color-pink: #EB4764;
+    --color-green: #7DF196;
+}
+
+body {
+    background-color: var(--darker-gray);
+    color: var(--light-gray);
+  
+    font-family: 'Inter', sans-serif;
+  
+    display: grid;
+    place-items: center;
+  }
+  
+  header{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  h1 { font-size: 2.5rem; 
+    font-weight: 600;
+     color: var(--color-green); 
+    }
+
+     .input-todo-card {
+        width: 59.5vw;
+        padding: 2rem;
+        background-color: var(--dark-gray);
+        border-radius: .75rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        -webkit-border-radius: .75rem;
+        -moz-border-radius: .75rem;
+        -ms-border-radius: .75rem;
+        -o-border-radius: .75rem;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  background-color: var(--dark-gray);
+  border-radius: .75rem;
+  border: grey solid ;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 1px var(--primary);
+  outline: none;
+  padding: 14px;
+  margin-bottom: 8px;
+} 
+h2{
+  padding: 20px;
+  text-align: center;
+}
+
+#addBtn {
+    width: 100px;
+    height: 30px;
+    background-color: #7DF196;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 8px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#todos-list{
+    color: white;
+  }
+
+  .todos .todo:hover {background-color: var(--light-gray);}
+
+  .todo_list {margin: 20px 0;}
+
+  .todo_list h2 {color: #00000080;}
+  
+  .todos {margin-top: 20px;}
+  .todo {
+    position: relative;
+    border-left: 6px solid var(--primary);
+    margin-bottom: 8px;
+    background-color: #495057;
+    padding: 10px;
+    padding-right: 50px;
+    border-radius: 5px;
+}
+.todo .delete {
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  background: url("./delete.svg") center no-repeat;
+  background-position: cover;
+  background-size: 50%;
+  background-color: #EB4764;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+.todos .todo:hover {background-color: var(--light-gray);}
+.todo .delete:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 70%;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: rgb(240, 129, 109);
+  color: white;
+  transform: translateX(100vw);
+  transition: transform 1s ease;
+  z-index: 30;
+
+}
+.toast.show{ transform: translateX(0);}
+
+@media only screen and (max-width: 600px) {
+.input-todo-card{
+  width: 100%;
+}
+}
+  
