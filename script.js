@@ -1,18 +1,16 @@
 let addBtn = document.getElementById('addBtn')
-let toast = document.querySelector('toast')
+let toast = document.querySelector('.toast')
 let inputTodo = document.querySelector('#input-todo');
 
 addTodo = ()=>{
     let todo = inputTodo.value;
-
-if(!todo.trim()){
-    toast.innerHTML = "input field is required";
-    toast.classList.add("show")
-    return setTimeout(()=>{
-        toast.classList.remove("show")
-    },3000)
-}
-
+    if(!todo.trim()){
+        toast.innerHTML = "input feild is requred";
+        toast.classList.add("show");
+        return setTimeout(()=>{
+            toast.classList.remove("show")
+        },3000)
+    }
 let todosList = document.getElementById('todos-list')
 const textNode = document.createTextNode(todo)
 const devEl = document.createElement('div')
