@@ -114,14 +114,14 @@ h2{
   background: url("./delete.svg") center no-repeat;
   background-position: cover;
   background-size: 50%;
-  background-color: #EB4764;
+  background-color: #7DF196;
   overflow: hidden;
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
 .todos .todo:hover {background-color: var(--light-gray);}
 .todo .delete:hover {
-  background-color: var(--primary);
+  background-color: #EB4764;
   border: 1px solid var(--primary);
 }
 .toast {
