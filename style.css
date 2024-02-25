@@ -131,7 +131,7 @@ h2{
   width: 70%;
   padding: 20px;
   border-radius: 6px;
-  background-color: rgb(240, 129, 109);
+  background-color: #7DF196;
   color: white;
   transform: translateX(100vw);
   transition: transform 1s ease;
