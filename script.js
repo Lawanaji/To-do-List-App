@@ -5,7 +5,7 @@ let inputTodo = document.querySelector('#input-todo');
 addTodo = ()=>{
     let todo = inputTodo.value;
     if(!todo.trim()){
-        toast.innerHTML = "input feild is requred";
+        toast.innerHTML = "input field is requred";
         toast.classList.add("show");
         return setTimeout(()=>{
             toast.classList.remove("show")
